@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flip Flop Solutions — AI SEO That Adapts</title>
+<meta name="description" content="AI-powered SEO agency that adapts where others stay rigid. We flip your strategy to match what Google needs right now. Free audit available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0D0D0D;--white:#F8F6F1;--amber:#E8A020;--grey:#6B6B6B;--rule:#D8D4CC;--serif:'Playfair Display',Georgia,serif;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none;}
+#cur{position:fixed;top:0;left:0;width:8px;height:8px;background:var(--black);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;}
+#cur.big{width:44px;height:44px;background:var(--amber);mix-blend-mode:multiply;}
+@media(max-width:768px){#cur{display:none;}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:var(--white);border-bottom:1px solid var(--rule);transition:box-shadow .3s;}
+.logo{font-family:var(--serif);font-weight:900;font-size:1.1rem;letter-spacing:-0.02em;text-decoration:none;color:var(--black);display:flex;align-items:center;gap:.3rem;cursor:none;}
+.logo-flip{display:inline-block;transition:transform .5s cubic-bezier(.68,-.55,.27,1.55);}
+.logo:hover .logo-flip{transform:scaleX(-1);}
+.logo-dot{color:var(--amber);}
+.nav-r{display:flex;align-items:center;gap:2rem;}
+.nav-link{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .2s;cursor:none;}
+.nav-link:hover{color:var(--black);}
+.nav-btn{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--black);padding:.5rem 1.2rem;text-decoration:none;border:1px solid var(--black);transition:background .2s,color .2s;cursor:none;}
+.nav-btn:hover{background:var(--amber);border-color:var(--amber);color:var(--black);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--black);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-mobile.open{display:flex;}
+.nav-mobile a{font-family:var(--serif);font-weight:900;font-size:2rem;color:var(--black);text-decoration:none;}
+.nav-mobile a:hover{color:var(--amber);}
+.nav-close{position:absolute;top:1.5rem;right:2rem;font-size:1.5rem;cursor:pointer;background:none;border:none;color:var(--black);font-family:var(--sans);}
+.hero{min-height:100vh;display:grid;grid-template-rows:1fr auto;padding:0 3rem;padding-top:5rem;border-bottom:1px solid var(--rule);}
+.hero-main{display:flex;flex-direction:column;justify-content:center;max-width:860px;padding:4rem 0 2rem;}
+.hero-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .7s .1s ease forwards;}
+.hero-eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--amber);}
+.hero-h1{font-family:var(--serif);font-weight:900;font-size:clamp(3rem,8vw,7rem);line-height:.95;letter-spacing:-0.03em;margin-bottom:1rem;opacity:0;animation:fadeUp .7s .25s ease forwards;}
+.flip-word{color:var(--amber);font-style:italic;display:inline-block;transition:opacity .2s,transform .2s;}
+.hero-sub{font-size:1rem;line-height:1.75;color:var(--grey);max-width:500px;margin-top:1.8rem;margin-bottom:2.5rem;opacity:0;animation:fadeUp .7s .45s ease forwards;}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .6s ease forwards;}
+.btn-main{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--black);padding:.85rem 2rem;text-decoration:none;border:1px solid var(--black);transition:background .2s,color .2s,border-color .2s;cursor:none;white-space:nowrap;}
+.btn-main:hover{background:var(--amber);border-color:var(--amber);color:var(--black);}
+.btn-ghost{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--black);padding:.85rem 2rem;text-decoration:none;border:1px solid var(--rule);transition:border-color .2s;cursor:none;white-space:nowrap;}
+.btn-ghost:hover{border-color:var(--black);}
+.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);opacity:0;animation:fadeUp .7s .8s ease forwards;}
+.hero-strip-item{padding:1.5rem 0;border-right:1px solid var(--rule);}
+.hero-strip-item:last-child{border-right:none;padding-left:2rem;}
+.hero-strip-item:not(:first-child){padding-left:2rem;}
+.strip-num{font-family:var(--serif);font-weight:900;font-size:2rem;color:var(--black);letter-spacing:-0.04em;line-height:1;}
+.strip-num span{color:var(--amber);}
+.strip-label{font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);margin-top:.3rem;}
+.flip-section{border-bottom:1px solid var(--rule);}
+.flip-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);}
+.flip-col{padding:3rem;}
+.flip-col:first-child{border-right:1px solid var(--rule);}
+.flip-col-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;}
+.flip-col:first-child .flip-col-label{color:var(--grey);}
+.flip-col:last-child .flip-col-label{color:var(--amber);}
+.flip-col-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.05;letter-spacing:-0.02em;}
+.flip-col:first-child .flip-col-title{color:var(--grey);text-decoration:line-through;text-decoration-color:var(--rule);}
+.flip-col:last-child .flip-col-title{color:var(--black);}
+.flip-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule);}
+.flip-row:last-child{border-bottom:none;}
+.flip-cell{padding:2rem 3rem;font-size:.88rem;line-height:1.75;}
+.flip-cell:first-child{border-right:1px solid var(--rule);color:var(--grey);}
+.flip-cell:last-child{color:var(--black);}
+.flip-cell .tag{font-family:var(--mono);font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:.5rem;color:var(--rule);}
+.flip-cell:last-child .tag{color:var(--amber);}
+.services{padding:5rem 3rem;border-bottom:1px solid var(--rule);}
+.section-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--rule);flex-wrap:wrap;gap:1rem;}
+.section-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);}
+.section-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.03em;line-height:1;}
+.section-title em{font-style:italic;color:var(--amber);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);}
+.svc{padding:2.5rem 2.2rem;border-right:1px solid var(--rule);position:relative;overflow:hidden;transition:background .25s;cursor:none;}
+.svc:last-child{border-right:none;}
+.svc::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--amber);transition:width .4s ease;}
+.svc:hover::after{width:100%;}
+.svc:hover{background:#FAF8F3;}
+.svc-n{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:var(--rule);margin-bottom:1.8rem;}
+.svc-icon{width:36px;height:36px;margin-bottom:1.4rem;}
+.svc-name{font-family:var(--serif);font-weight:900;font-size:1.2rem;letter-spacing:-0.01em;margin-bottom:.8rem;line-height:1.15;}
+.svc-desc{font-size:.8rem;line-height:1.8;color:var(--grey);}
+.svc-arrow{display:inline-block;margin-top:1.5rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);text-decoration:none;transition:letter-spacing .3s;cursor:none;}
+.svc:hover .svc-arrow{letter-spacing:.2em;}
+.process{border-bottom:1px solid var(--rule);}
+.process-head{padding:4rem 3rem 2.5rem;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);}
+.pstep{padding:2.5rem 2rem;border-right:1px solid var(--rule);}
+.pstep:last-child{border-right:none;}
+.pstep-bg-num{font-family:var(--serif);font-weight:900;font-size:5.5rem;color:var(--rule);line-height:1;margin-bottom:1rem;letter-spacing:-0.05em;}
+.pstep-label{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;}
+.pstep-title{font-family:var(--serif);font-size:1.05rem;font-weight:900;margin-bottom:.7rem;letter-spacing:-0.01em;}
+.pstep-desc{font-size:.76rem;line-height:1.8;color:var(--grey);}
+.manifesto{background:var(--black);padding:6rem 3rem;border-bottom:1px solid #222;position:relative;overflow:hidden;}
+.manifesto::before{content:'FLIP';position:absolute;right:-0.05em;top:50%;transform:translateY(-50%);font-family:var(--serif);font-weight:900;font-size:28vw;color:rgba(255,255,255,0.03);pointer-events:none;letter-spacing:-0.06em;line-height:1;}
+.manifesto-inner{max-width:680px;position:relative;}
+.manifesto-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+.manifesto-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--amber);}
+.manifesto-text{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(1.4rem,3vw,2.2rem);color:var(--white);line-height:1.5;}
+.manifesto-text strong{font-style:normal;font-weight:900;color:var(--amber);}
+.manifesto-sig{margin-top:2.5rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:rgba(248,246,241,.3);text-transform:uppercase;}
+.why{padding:5rem 3rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.reasons{margin-top:2rem;}
+.reason{display:flex;gap:1.5rem;padding:1.4rem 0;border-bottom:1px solid var(--rule);transition:padding-left .25s;cursor:none;}
+.reason:hover{padding-left:.6rem;}
+.reason:first-child{border-top:1px solid var(--rule);}
+.reason-n{font-family:var(--mono);font-size:.58rem;color:var(--rule);padding-top:.15rem;flex-shrink:0;width:20px;}
+.reason-title{font-family:var(--serif);font-weight:900;font-size:.95rem;letter-spacing:-0.01em;margin-bottom:.3rem;}
+.reason-text{font-size:.78rem;line-height:1.8;color:var(--grey);}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.fact{background:var(--white);padding:2rem;transition:background .2s;cursor:none;}
+.fact:hover{background:var(--black);}
+.fact:hover .fact-n,.fact:hover .fact-label{color:rgba(248,246,241,.4);}
+.fact:hover .fact-num{color:var(--amber);}
+.fact-n{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;color:var(--rule);margin-bottom:1rem;text-transform:uppercase;transition:color .2s;}
+.fact-num{font-family:var(--serif);font-weight:900;font-size:2.6rem;letter-spacing:-0.04em;color:var(--black);line-height:1;transition:color .2s;}
+.fact-num sup{font-size:1.1rem;}
+.fact-label{font-size:.7rem;color:var(--grey);margin-top:.4rem;line-height:1.5;transition:color .2s;}
+.cta{display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;padding:5rem 3rem;border-bottom:1px solid var(--rule);}
+.cta-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;}
+.cta-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-0.03em;line-height:1;}
+.cta-title em{font-style:italic;color:var(--grey);}
+.cta-sub{font-size:.83rem;line-height:1.75;color:var(--grey);margin-top:1.2rem;max-width:420px;}
+.cta-right{flex-shrink:0;text-align:center;}
+.cta-note{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;color:var(--rule);text-transform:uppercase;margin-top:.8rem;}
+.contact-section{padding:5rem 3rem;background:var(--black);border-bottom:1px solid #222;}
+.contact-inner{max-width:640px;margin:0 auto;text-align:center;}
+.contact-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;}
+.contact-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.8rem,3vw,3rem);color:var(--white);line-height:1;letter-spacing:-0.02em;margin-bottom:1.5rem;}
+.contact-title em{font-style:italic;color:var(--amber);}
+.contact-sub{font-size:.85rem;color:var(--grey);line-height:1.75;margin-bottom:3rem;}
+.contact-form{display:flex;flex-direction:column;gap:1rem;text-align:left;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-field{display:flex;flex-direction:column;gap:.4rem;}
+.form-field label{font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(248,246,241,.5);}
+.form-field input,.form-field select,.form-field textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--white);font-family:var(--sans);font-size:.85rem;padding:.75rem 1rem;outline:none;transition:border-color .2s;width:100%;}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--amber);}
+.form-field select option{background:#1a1a1a;}
+.form-field textarea{resize:vertical;min-height:100px;}
+.form-submit{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--black);background:var(--amber);border:none;padding:1rem 2.5rem;cursor:pointer;transition:background .2s;margin-top:.5rem;align-self:flex-start;}
+.form-submit:hover{background:#D4911C;}
+.form-success{display:none;background:rgba(0,196,100,.1);border:1px solid rgba(0,196,100,.3);padding:1.5rem;text-align:center;color:#5DCA8A;font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;margin-top:1rem;}
+footer{padding:2rem 3rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;}
+.foot-brand{font-family:var(--serif);font-weight:900;font-size:.95rem;letter-spacing:-0.02em;text-decoration:none;color:var(--black);cursor:none;}
+.foot-brand span{color:var(--amber);}
+.foot-links{display:flex;gap:2rem;list-style:none;justify-content:center;flex-wrap:wrap;}
+.foot-links a{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .2s;cursor:none;}
+.foot-links a:hover{color:var(--black);}
+.foot-copy{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--rule);text-transform:uppercase;text-align:right;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.on{opacity:1;transform:none;}
+.reveal.d1{transition-delay:.1s;}.reveal.d2{transition-delay:.2s;}.reveal.d3{transition-delay:.3s;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-r .nav-link,.nav-r .nav-btn{display:none;}
+  .nav-hamburger{display:flex;}
+  .hero{padding:0 1.5rem;padding-top:4.5rem;}
+  .hero-strip{grid-template-columns:1fr;}
+  .hero-strip-item{border-right:none;border-bottom:1px solid var(--rule);padding-left:0!important;padding:1rem 0;}
+  .hero-strip-item:last-child{border-bottom:none;}
+  .flip-header{grid-template-columns:1fr;}
+  .flip-col:first-child{border-right:none;border-bottom:1px solid var(--rule);}
+  .flip-col{padding:2rem 1.5rem;}
+  .flip-row{grid-template-columns:1fr;}
+  .flip-cell:first-child{border-right:none;border-bottom:1px solid var(--rule);}
+  .flip-cell{padding:1.5rem 1.5rem;}
+  .services{padding:3rem 1.5rem;}
+  .services-grid{grid-template-columns:1fr;}
+  .svc{border-right:none;border-bottom:1px solid var(--rule);}
+  .svc:last-child{border-bottom:none;}
+  .process-head{padding:3rem 1.5rem 2rem;}
+  .process-steps{grid-template-columns:1fr 1fr;}
+  .pstep{border-bottom:1px solid var(--rule);}
+  .pstep:nth-child(odd){border-right:1px solid var(--rule);}
+  .pstep:nth-child(even){border-right:none;}
+  .manifesto{padding:4rem 1.5rem;}
+  .why{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem;}
+  .cta{grid-template-columns:1fr;gap:2rem;padding:4rem 1.5rem;}
+  .cta-right{text-align:left;}
+  .contact-section{padding:4rem 1.5rem;}
+  .form-row{grid-template-columns:1fr;}
+  footer{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem;}
+  .foot-links{justify-content:flex-start;gap:1rem;}
+  .foot-copy{text-align:left;}
+  .section-top{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:480px){
+  .process-steps{grid-template-columns:1fr;}
+  .pstep:nth-child(odd){border-right:none;}
+  .pstep-bg-num{font-size:4rem;}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+
+<nav id="nav">
+  <a href="#" class="logo"><span class="logo-flip">↔</span>&nbsp;Flip<span class="logo-dot">.</span>Flop Solutions</a>
+  <div class="nav-r">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#process" class="nav-link">Process</a>
+    <a href="#why" class="nav-link">Why Us</a>
+    <a href="#contact" class="nav-btn">Free Audit</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile" id="mobileNav">
+  <button class="nav-close" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#process" onclick="toggleMenu()">Process</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#contact" onclick="toggleMenu()" style="color:var(--amber);">Free Audit →</a>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="hero-eyebrow">AI-Powered SEO — Worldwide</div>
+    <h1 class="hero-h1">We flip<br><span id="flipWord" class="flip-word">guesswork</span><br>into rankings.</h1>
+    <p class="hero-sub">Flip Flop Solutions adapts where others stay rigid. We read what Google needs right now — then we flip our strategy to match. No templates. No guesswork. Just results.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-main">Get Your Free Audit</a>
+      <a href="#the-flip" class="btn-ghost">See The Flip →</a>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hero-strip-item"><div class="strip-num">3<span>×</span></div><div class="strip-label">Faster than traditional SEO</div></div>
+    <div class="hero-strip-item"><div class="strip-num">AI<span>+</span></div><div class="strip-label">Human strategy, every time</div></div>
+    <div class="hero-strip-item"><div class="strip-num">0</div><div class="strip-label">Fluff. Zero vanity metrics.</div></div>
+  </div>
+</section>
+
+<section class="flip-section" id="the-flip">
+  <div class="flip-header reveal">
+    <div class="flip-col"><div class="flip-col-label">The old way</div><div class="flip-col-title">Rigid. Slow.<br>One-size-fits-all.</div></div>
+    <div class="flip-col"><div class="flip-col-label">The Flip Flop way</div><div class="flip-col-title">Adaptive. Fast.<br>Built around you.</div></div>
+  </div>
+  <div class="flip-row reveal"><div class="flip-cell"><span class="tag">Strategy</span>Same keyword sheet for every client. Set it and forget it.</div><div class="flip-cell"><span class="tag">Strategy</span>We flip your strategy every time Google shifts — because Google never stays still.</div></div>
+  <div class="flip-row reveal d1"><div class="flip-cell"><span class="tag">Content</span>Stuffed with keywords nobody searches. Written to tick boxes.</div><div class="flip-cell"><span class="tag">Content</span>AI-assisted content that answers real questions, earns real clicks, converts real clients.</div></div>
+  <div class="flip-row reveal d2"><div class="flip-cell"><span class="tag">Reporting</span>Vanity dashboards. Impressions. No real numbers.</div><div class="flip-cell"><span class="tag">Reporting</span>Rankings. Traffic. Leads. Three numbers that tell you if it's working.</div></div>
+  <div class="flip-row reveal d3"><div class="flip-cell"><span class="tag">Links</span>Bulk spam links. Fake authority that tanks you in the next update.</div><div class="flip-cell"><span class="tag">Links</span>Real placements on real sites. Links Google respects — and keeps respecting.</div></div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-top reveal">
+    <span class="section-label">What we do</span>
+    <h2 class="section-title">Three ways we <em>flip</em> your rankings</h2>
+  </div>
+  <div class="services-grid">
+    <div class="svc reveal">
+      <div class="svc-n">01 / 03</div>
+      <svg class="svc-icon" viewBox="0 0 36 36" fill="none"><path d="M6 28l8-10 6 5 8-14" stroke="#0D0D0D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="9" r="2.5" stroke="#E8A020" stroke-width="1.4"/><path d="M3 8h5M3 13h4M3 18h3" stroke="#D8D4CC" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <div class="svc-name">AI Content<br>Strategy</div>
+      <div class="svc-desc">We use AI to map what your ideal customers are actually searching, then create content that captures them — and converts them into paying clients.</div>
+      <a href="#contact" class="svc-arrow">Get started →</a>
+    </div>
+    <div class="svc reveal d1">
+      <div class="svc-n">02 / 03</div>
+      <svg class="svc-icon" viewBox="0 0 36 36" fill="none"><rect x="5" y="5" width="26" height="18" rx="1.5" stroke="#0D0D0D" stroke-width="1.4"/><path d="M5 11h26" stroke="#0D0D0D" stroke-width="1.2" opacity=".3"/><circle cx="8.5" cy="8" r="1" fill="#E8A020"/><path d="M11 16l3 3.5 5.5-6" stroke="#E8A020" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 27h18M13 27v4M23 27v4" stroke="#D8D4CC" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <div class="svc-name">Technical<br>SEO</div>
+      <div class="svc-desc">Full site audits, Core Web Vitals, schema markup, crawl fixes. We make sure Google can find, read, and trust every page of your site.</div>
+      <a href="#contact" class="svc-arrow">Get started →</a>
+    </div>
+    <div class="svc reveal d2">
+      <div class="svc-n">03 / 03</div>
+      <svg class="svc-icon" viewBox="0 0 36 36" fill="none"><circle cx="7" cy="18" r="4" stroke="#0D0D0D" stroke-width="1.4"/><circle cx="29" cy="9" r="4" stroke="#0D0D0D" stroke-width="1.4"/><circle cx="29" cy="27" r="4" stroke="#E8A020" stroke-width="1.4"/><path d="M11 16.5L25 11M11 19.5L25 25" stroke="#D8D4CC" stroke-width="1.2"/></svg>
+      <div class="svc-name">Link<br>Building</div>
+      <div class="svc-desc">High-authority backlinks from real websites in your niche. No spam, no shortcuts — just the kind of links that build lasting Google trust.</div>
+      <a href="#contact" class="svc-arrow">Get started →</a>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-head reveal">
+    <span class="section-label">How it works</span>
+    <h2 class="section-title">The <em>flip</em> in four moves</h2>
+  </div>
+  <div class="process-steps">
+    <div class="pstep reveal"><div class="pstep-bg-num">01</div><div class="pstep-label">Free</div><div class="pstep-title">We Audit You</div><div class="pstep-desc">A full AI-powered scan of your site, competitors, and keyword gaps. You see exactly what's holding you back — no charge, no obligation.</div></div>
+    <div class="pstep reveal d1"><div class="pstep-bg-num">02</div><div class="pstep-label">Custom</div><div class="pstep-title">We Build Your Flip</div><div class="pstep-desc">A strategy built for your business, your market, your budget. Not copied from another client's playbook.</div></div>
+    <div class="pstep reveal d2"><div class="pstep-bg-num">03</div><div class="pstep-label">Ongoing</div><div class="pstep-title">We Execute &amp; Adapt</div><div class="pstep-desc">Content, links, tech fixes — shipped on a clear schedule. We monitor rankings weekly and flip tactics whenever Google does.</div></div>
+    <div class="pstep reveal d3"><div class="pstep-bg-num">04</div><div class="pstep-label">Real</div><div class="pstep-title">You Rank. You Grow.</div><div class="pstep-desc">Rankings move. Traffic builds. Leads arrive. We report only the numbers that connect to your revenue — nothing else.</div></div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="manifesto-inner reveal">
+    <div class="manifesto-label">Our belief</div>
+    <p class="manifesto-text">The businesses that win on Google aren't the ones with the biggest budgets — they're the ones with the most <strong>adaptive</strong> strategy. Every Google update is a door. We make sure yours is always <strong>open</strong>.</p>
+    <div class="manifesto-sig">— Flip Flop Solutions · flipflopsolution.com</div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-left reveal">
+    <div class="section-label" style="margin-bottom:1.2rem;">Why choose us</div>
+    <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem);">We're not a<br>traditional agency.<br><em>Good.</em></h2>
+    <div class="reasons">
+      <div class="reason"><div class="reason-n">01</div><div class="reason-body"><div class="reason-title">AI + Human, always</div><div class="reason-text">AI finds the opportunity. A human decides the move. Speed of machines with the judgment of real experience.</div></div></div>
+      <div class="reason"><div class="reason-n">02</div><div class="reason-body"><div class="reason-title">Strategies that bend, not break</div><div class="reason-text">When Google flips the algorithm, most agencies scramble. We've already adapted. Flexibility is built into every strategy.</div></div></div>
+      <div class="reason"><div class="reason-n">03</div><div class="reason-body"><div class="reason-title">Honest numbers only</div><div class="reason-text">If a metric doesn't connect to your revenue, we don't report it. You'll never wonder what it actually means.</div></div></div>
+      <div class="reason"><div class="reason-n">04</div><div class="reason-body"><div class="reason-title">Open to any business</div><div class="reason-text">Restaurant, startup, e-commerce, clinic — your industry doesn't limit us; it focuses us.</div></div></div>
+    </div>
+  </div>
+  <div class="why-right reveal d2">
+    <div class="fact-grid">
+      <div class="fact"><div class="fact-n">Result 01</div><div class="fact-num">3<sup>×</sup></div><div class="fact-label">Faster to page one vs. traditional agencies</div></div>
+      <div class="fact"><div class="fact-n">Result 02</div><div class="fact-num">312<sup>%</sup></div><div class="fact-label">Average organic traffic growth in 6 months</div></div>
+      <div class="fact"><div class="fact-n">Result 03</div><div class="fact-num">0</div><div class="fact-label">Clients dropped due to a Google penalty. Zero.</div></div>
+      <div class="fact"><div class="fact-n">Result 04</div><div class="fact-num">∞</div><div class="fact-label">Industries we work with — none off the table</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-text reveal">
+    <div class="cta-label">Ready to flip?</div>
+    <h2 class="cta-title">Let's find out<br>what's holding<br><em>you</em> back.</h2>
+    <p class="cta-sub">We'll audit your site, map your competitors, and show you exactly where the opportunity is. Free. No sales pressure. Just answers.</p>
+  </div>
+  <div class="cta-right reveal d2">
+    <a href="#contact" class="btn-main" style="font-size:.78rem;padding:1rem 2.2rem;display:inline-block;">Book Your Free Audit →</a>
+    <div class="cta-note">No card. No commitment. Just clarity.</div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner reveal">
+    <div class="contact-label">Get In Touch</div>
+    <h2 class="contact-title">Start your <em>free</em> audit today</h2>
+    <p class="contact-sub">Fill in the form and we'll get back to you within 24 hours with a personalised SEO plan — completely free.</p>
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-field"><label>Your Name *</label><input type="text" name="name" required placeholder="John Smith"></div>
+        <div class="form-field"><label>Email Address *</label><input type="email" name="email" required placeholder="john@company.com"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label>Website URL *</label><input type="url" name="website" required placeholder="https://yourwebsite.com"></div>
+        <div class="form-field"><label>Service Interested In</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>AI Content Strategy</option>
+            <option>Technical SEO</option>
+            <option>Link Building</option>
+            <option>Full SEO Package</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-field"><label>Tell us about your business</label><textarea name="message" placeholder="What's your main SEO challenge right now?"></textarea></div>
+      <button type="submit" class="form-submit">Send My Free Audit Request →</button>
+    </form>
+    <div class="form-success" id="formSuccess">✓ Message received! We'll be in touch within 24 hours.</div>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="foot-brand">Flip<span>.</span>Flop Solutions</a>
+  <ul class="foot-links">
+    <li><a href="#services">AI Content SEO</a></li>
+    <li><a href="#services">Technical SEO</a></li>
+    <li><a href="#services">Link Building</a></li>
+    <li><a href="#contact">Free Audit</a></li>
+    <li><a href="#why">Why Us</a></li>
+  </ul>
+  <div class="foot-copy">© 2026 Flip Flop Solutions</div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur');
+if(cur&&window.innerWidth>768){
+  document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
+  document.querySelectorAll('a,button,.svc,.reason,.fact,.pstep').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cur.classList.add('big'));
+    el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
+  });
+}
+function toggleMenu(){
+  const m=document.getElementById('mobileNav');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+const words=['guesswork','slow growth','old tactics','dead traffic','vague reports'];
+let wi=0;
+const fw=document.getElementById('flipWord');
+if(fw){
+  setInterval(()=>{
+    fw.style.opacity='0';fw.style.transform='translateY(-12px)';
+    setTimeout(()=>{
+      wi=(wi+1)%words.length;fw.textContent=words[wi];
+      fw.style.transform='translateY(10px)';
+      setTimeout(()=>{fw.style.opacity='1';fw.style.transform='translateY(0)';},50);
+    },220);
+  },2600);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.boxShadow=window.scrollY>10?'0 1px 0 #D8D4CC':'none';
+});
+</script>
+</body>
+</html>
