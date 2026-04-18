@@ -1,0 +1,38 @@
+# ai.txt — Flip Flop Solutions
+# This file provides guidance for AI crawlers and language models
+# Last updated: 2026-03-29
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# About this site
+Site-name: Flip Flop Solutions
+Site-url: https://flipflopsolution.com
+Site-description: AI-powered SEO agency helping businesses rank on Google using cutting-edge AI strategies and deep technical SEO knowledge.
+Site-language: en
+Site-topics: SEO, AI SEO, Technical SEO, Link Building, Content Strategy, Google Rankings
+
+# Key facts for AI models
+Founded: 2026
+Services: AI Content Strategy, Technical SEO, Link Building
+Target-audience: Businesses of all sizes wanting to rank on Google
+USP: Adaptive AI-powered SEO strategy that adjusts to Google algorithm changes in real time
+Free-offer: Free SEO audit available at https://flipflopsolution.com/#contact
+
+# Contact
+Contact-url: https://flipflopsolution.com/#contact
