@@ -1,0 +1,333 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://flipflopsolution.com/#organization",
+      "name": "Flip Flop Solutions",
+      "alternateName": "FlipFlop Solutions",
+      "url": "https://flipflopsolution.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://flipflopsolution.com/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://flipflopsolution.com/og-image.png",
+      "description": "Flip Flop Solutions is an AI-powered SEO agency specializing in Generative Engine Optimization (GEO), LLM citation engineering, technical SEO, and AI content strategy. We align brand digital footprints with the latent space of large language models to ensure citation authority across ChatGPT, Claude, Gemini, and Perplexity.",
+      "foundingDate": "2026",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 10
+      },
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "Large Language Model SEO",
+        "AI Citation Engineering",
+        "Technical SEO",
+        "Entity-based SEO",
+        "Core Web Vitals",
+        "JSON-LD Schema Markup",
+        "Link Building",
+        "AI Content Strategy",
+        "Search Generative Experience",
+        "LLM Share of Voice",
+        "Vector Database Optimization"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI SEO Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Generative Engine Optimization (GEO)",
+              "description": "Optimize your brand to be cited by ChatGPT, Claude, Gemini, and Perplexity through vector database inclusion, citation engineering, and sentiment vector alignment.",
+              "url": "https://flipflopsolution.com/geo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Neural Brand Scan",
+              "description": "A free Brand-LLM Alignment Report. We scan your site through GPT-4o, Claude 3.5, and Gemini Pro to identify hallucinations, citation gaps, and authority blockers.",
+              "url": "https://flipflopsolution.com/neural-scan",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Content Strategy",
+              "description": "Entity-based content engineered for LLM citation and Google ranking. AI keyword research, SEO blog posts, and content calendars.",
+              "url": "https://flipflopsolution.com/ai-content-strategy",
+              "priceRange": "$199-$699/mo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technical SEO",
+              "description": "Full technical SEO audits, Core Web Vitals optimization, schema markup, and crawl fixes. LCP under 1.2s, INP under 150ms, CLS under 0.05.",
+              "url": "https://flipflopsolution.com/technical-seo",
+              "priceRange": "$149-$499"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Link Building",
+              "description": "High-authority backlinks from real, relevant websites. Guest posts, niche edits, and outreach campaigns. No spam, no PBNs.",
+              "url": "https://flipflopsolution.com/link-building",
+              "priceRange": "$199-$699/mo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technical Infrastructure",
+              "description": "Edge-delivered, JSON-LD hyper-structured technical SEO infrastructure. Vercel edge network, GitHub CI/CD automation, 24/7 SGE monitoring.",
+              "url": "https://flipflopsolution.com/tech-infrastructure"
+            }
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "English"
+        ],
+        "url": "https://flipflopsolution.com/contact"
+      },
+      "sameAs": [
+        "https://flipflopsolution.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://flipflopsolution.com/#website",
+      "url": "https://flipflopsolution.com",
+      "name": "Flip Flop Solutions",
+      "description": "Engineering Visibility in the Generative Era",
+      "publisher": {
+        "@id": "https://flipflopsolution.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://flipflopsolution.com/#webpage",
+      "url": "https://flipflopsolution.com/",
+      "name": "Flip Flop Solutions \u2014 Engineering Visibility in the Generative Era",
+      "description": "We align your brand's digital footprint with the latent space of LLMs. GEO, Technical SEO, and Citation Engineering for the AI-first world.",
+      "isPartOf": {
+        "@id": "https://flipflopsolution.com/#website"
+      },
+      "about": {
+        "@id": "https://flipflopsolution.com/#organization"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://flipflopsolution.com/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://flipflopsolution.com/geo#webpage",
+      "url": "https://flipflopsolution.com/geo",
+      "name": "GEO \u2014 Generative Engine Optimization \u2014 Flip Flop Solutions",
+      "description": "Optimize your brand for ChatGPT, Claude, Gemini, and Perplexity through vector database inclusion, citation engineering, and sentiment vector alignment.",
+      "isPartOf": {
+        "@id": "https://flipflopsolution.com/#website"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://flipflopsolution.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "GEO",
+            "item": "https://flipflopsolution.com/geo"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://flipflopsolution.com/neural-scan#webpage",
+      "url": "https://flipflopsolution.com/neural-scan",
+      "name": "Neural Scan \u2014 Brand-LLM Alignment Report \u2014 Flip Flop Solutions",
+      "description": "A free Brand-LLM Alignment Report. We scan your site through GPT-4o, Claude 3.5, and Gemini Pro.",
+      "isPartOf": {
+        "@id": "https://flipflopsolution.com/#website"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://flipflopsolution.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Neural Scan",
+            "item": "https://flipflopsolution.com/neural-scan"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://flipflopsolution.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Generative Engine Optimization (GEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generative Engine Optimization (GEO) is the practice of structuring a brand's digital footprint to be cited as a primary source by AI language models including ChatGPT, Claude, Gemini, and Perplexity. Unlike traditional SEO which targets keyword rankings, GEO targets LLM citation velocity and AI share of voice through vector database inclusion, citation engineering, and sentiment alignment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is LLM Share of Voice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LLM Share of Voice measures how frequently your brand is cited, referenced, or recommended by AI language models when users query topics in your domain. It is the generative era equivalent of organic search market share and is one of the primary metrics Flip Flop Solutions tracks and optimizes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Citation Velocity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Citation Velocity is the rate at which new LLM citations of your brand are generated per month across AI systems. Higher citation velocity means AI models are increasingly associating your brand with relevant topics, which builds compound authority over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is GEO different from traditional SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional SEO optimizes for Google's PageRank algorithm which processes hyperlinks. GEO optimizes for large language models which process token probability distributions across high-dimensional embedding spaces. GEO requires entity-based content architecture, JSON-LD hyper-structuring, cross-domain co-citation patterns, and sentiment vector alignment \u2014 none of which traditional SEO addresses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Brand-LLM Alignment Report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Brand-LLM Alignment Report (also called the Neural Scan) is Flip Flop Solutions' free diagnostic service. We run your brand through GPT-4o, Claude 3.5, and Gemini Pro across five diagnostic vectors: citation presence, hallucination audit, sentiment vector, entity graph, and technical blockers. You receive a detailed technical report within 48 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer a free audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Neural Scan is completely free with no obligation. We scan your domain through three major LLMs, identify citation gaps and hallucinations, and deliver a Brand-LLM Alignment Report within 48 hours. Request yours at flipflopsolution.com/neural-scan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries does Flip Flop Solutions work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flip Flop Solutions works with any business whose customers use Google or AI assistants to find information. This includes SaaS companies, e-commerce stores, local businesses, healthcare providers, financial services, startups, and enterprise brands. If your customers ask AI tools questions in your domain, we can engineer your citation authority."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Synthetic Footprint strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Synthetic Footprint is Flip Flop Solutions' three-layer GEO methodology: Layer 1 is Vector Database Inclusion (structuring content for high-dimensional retrieval with target cosine similarity above 0.87), Layer 2 is Citation Engineering (building cross-domain entity signals that establish URL as primary source of truth), and Layer 3 is Sentiment Vector Alignment (auditing and tuning how AI models describe your brand)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does SEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional SEO results typically take 3-6 months. With Flip Flop Solutions' AI-powered approach, most clients see measurable ranking improvements within 60-90 days and LLM citation improvements within 30-45 days of implementation. GEO results compound over time as entity signals reinforce across the web."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the name Flip Flop mean for an SEO agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In electronics, a flip-flop is a bistable multivibrator \u2014 a fundamental digital circuit capable of storing one bit of memory. The name represents the logic gate between your brand and the AI future: the ability to hold and switch states, to adapt and remain stable. As an SEO agency, it also represents our core value of adaptability \u2014 flipping strategy whenever Google or AI models change."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://flipflopsolution.com/#dataset",
+      "name": "LLM Citation Intelligence Index",
+      "description": "Real-time monitoring dataset tracking brand citation velocity, LLM share of voice, and hallucination rates across GPT-4o, Claude 3.5, Gemini Pro, and Perplexity for client brands.",
+      "creator": {
+        "@id": "https://flipflopsolution.com/#organization"
+      },
+      "url": "https://flipflopsolution.com",
+      "keywords": [
+        "LLM citation",
+        "AI share of voice",
+        "generative engine optimization",
+        "brand monitoring"
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        "h1",
+        "h2",
+        ".hero-sub",
+        ".body-text"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://flipflopsolution.com/#service",
+      "name": "Flip Flop Solutions",
+      "url": "https://flipflopsolution.com",
+      "description": "AI SEO agency specializing in Generative Engine Optimization, LLM citation engineering, and technical SEO infrastructure.",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Credit Card, Bank Transfer",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "hasMap": "https://flipflopsolution.com/contact"
+    }
+  ]
+}
