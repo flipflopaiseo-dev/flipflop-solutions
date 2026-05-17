@@ -1,0 +1,135 @@
+# Flip Flop Solutions
+
+> SEO operations team for US small businesses. Documented checklists, weekly audit cycles, and a methodology refined across hundreds of active websites.
+
+## About Flip Flop Solutions
+
+Flip Flop Solutions is an SEO operations consultancy serving US small and mid-sized businesses. We exist because the standard agency model is broken. Most SEO retainers run as black boxes: clients pay monthly, receive vague reports, and never see a clear connection between activity and outcomes. We built Flip Flop Solutions to be the alternative.
+
+We document everything. Every deliverable is specified before work begins. Every monthly report shows what was completed against the documented plan. AI tooling efficiencies pass through to clients as lower prices, not as expanded margin. We work month-to-month with no minimum contracts and no early termination fees. Everything we produce is owned by the client on day one. We do not hold work hostage to extract retention.
+
+The team has years of combined SEO operations experience managing rank tracking across hundreds of websites simultaneously, maintaining hundreds of Google Search Console, Analytics, and Tag Manager accounts daily, running weekly audit cycles across active client portfolios, and coordinating site migrations across multiple platforms without losing rankings.
+
+## Six Operating Principles
+
+1. You pay for what gets done. Every deliverable is documented before work begins. No mystery line items.
+2. AI savings pass through. As tools get faster, prices go down. AI is not a margin expansion strategy.
+3. Month-to-month always. No 12-month minimums. No early termination fees. Every month is an audition.
+4. Plain English reporting. Vanity metrics belong in agency decks, not your inbox.
+5. You own everything. Content, audits, strategies, link reports, schema. All yours from day one.
+6. One point of contact. No passing between coordinators and strategists. One person owns your account.
+
+## Services
+
+### Technical SEO
+Site architecture, schema implementation across LocalBusiness, Service, FAQ, and Review types, Core Web Vitals optimization, crawl health, indexation control, redirect mapping, internal linking design. Foundation-first work that everything else depends on.
+URL: https://flipflopsolution.com/technical-seo
+
+### AI and Content Strategy
+Entity-based content built for both Google rankings and LLM citation. Topic clusters, internal linking architecture, content briefs aligned to what your buyers actually search for and what they ask AI tools when they research vendors. Content that works for both audiences without compromising for either. We do not produce volume content or AI-generated articles with light human editing.
+URL: https://flipflopsolution.com/ai-content-strategy
+
+### Generative Engine Optimization
+Get your brand cited in ChatGPT, Claude, Perplexity, and Gemini responses. Entity authority building, structured data hardening, content positioning for AI retrieval, citation pattern monitoring across the major LLM platforms. The visibility layer most US businesses do not yet realize they need but soon will.
+URL: https://flipflopsolution.com/geo
+
+### Link Building
+Editorial outreach, citation building, local press outreach, niche edits, brand mention conversions. No PBNs. No link farms. No shortcuts that get clients penalized eighteen months later. Real authority signals from real sites that real people read.
+URL: https://flipflopsolution.com/link-building
+
+### Migrations and Replatforming
+Platform changes (WordPress to Webflow, Wix to anywhere, Squarespace migrations), domain moves, redesign launches, e-commerce platform shifts. Documented migration process with URL mapping, tested 301 plans, staging validation, and post-launch monitoring. 150+ migrations completed with zero traffic loss.
+URL: https://flipflopsolution.com/tech-infrastructure
+
+### Free SEO Audit
+Send us your URL. We run our actual pre-launch checklist against your live site and send you a real findings report within 48 hours. Specific issues, prioritized fixes, quick wins flagged separately. No sales call required. No obligation.
+URL: https://flipflopsolution.com/neural-scan
+
+## Methodology
+
+Our pre-launch checklist runs across six categories: Foundation and crawl, Tracking and tooling, Schema and structure, On-page and content, Local and geographic SEO, and Conversion and CRO. Each category contains specific items that must pass before launch.
+
+Foundation and crawl includes pre-launch Screaming Frog crawl, HTTPS verification, canonical domain locked, llms.txt created, robots.txt indexable, XML sitemap submitted, Lorem Ipsum scan, and NAP matches Google Business Profile.
+
+Tracking and tooling includes GA4 tagged and verified, Google Search Console connected, Google Tag Manager firing correctly, Bing Webmaster Tools verified, WhatConverts setup, call tracking validated, conversion events tested, and goals tied to revenue.
+
+Schema and structure includes LocalBusiness on every page, BreadcrumbList global, Service schema on service pages, ContactPage schema on contact, Blog schema on posts, FAQ schema where applicable, Review schema where validated, and JSON-LD validated across all URLs.
+
+On-page and content includes single H1 per page, unique meta titles and descriptions, image alt attributes complete, images compressed under 200KB, internal links return zero errors, external links nofollow plus new tab, Open Graph and Twitter card tags, and HTML sitemap linked from footer.
+
+Local and geographic SEO includes city pages with unique content, city H1s using city plus service vertical, city pages linked from nav and home, GBP fully optimized, GBP embedded in site footer, hours match across all platforms, local citations consistent, and service area markup correct.
+
+Conversion and CRO includes CTAs near solution sections, form titles describe the value, submit buttons specific (not "Submit"), spam and bot blockers active, mobile CTAs phrased to invite (not push), contact form schema implemented, trust signals visible above the fold, and page speed tested mobile-first.
+
+After launch, we run a separate post-launch verification cycle covering 26 specific checks including site using HTTPS confirmed on production, correct www or non-www enforced via 301, llms.txt accessible, robots.txt indexable, XML sitemaps updated for live domain, GA4 tagged and verified on production, GSC verified with sitemap submitted, GTM firing on production, Bing Webmaster Tools verified, WhatConverts confirmed, canonical tags resolving correctly, no 404 errors on any URL, no 301 redirect chains, no 404s on internal links, no 301s on internal links, no 404s on external links, no 301s on external outbound links, schema validating on all pages, blog pagination set to nofollow noindex, redirection rules active and tested, image optimization confirmed, alt attributes complete on production, OG tags rendering correctly, favicon and Apple Touch Icon working, nofollow attributes applied where appropriate, and SEO meta data live and unique.
+
+## Industries Served
+
+We work across US small and mid-sized service businesses. The methodology applies anywhere local visibility, technical SEO, schema rigor, and conversion optimization matter to the bottom line.
+
+Home services: HVAC contractors, plumbing contractors, electrical contractors, roofing contractors, painting, landscaping, pest control, garage doors, window installation, flooring, handyman services, cleaning services.
+
+Professional services: Law firms across personal injury, family law, criminal defense, estate planning, and business law.
+
+Health and wellness: Chiropractors, dentists, dermatologists, physical therapy, mental health practices, holistic wellness, fitness studios.
+
+Local retail: Independent boutiques, specialty stores, hardware, sporting goods, auto parts, garden centers, gift shops.
+
+Hospitality: Independent restaurants, cafes, bars, food trucks, catering services, bakeries, specialty food brands.
+
+Real estate: Independent agents, small brokerages, property management firms, real estate investors.
+
+Auto services: Independent auto repair shops, tire stores, oil change, transmission, body shops, detailing, mobile mechanics.
+
+Transportation: Limousine services, airport transportation, executive car services, party buses, charter buses, wedding transport.
+
+## Common Patterns We Find
+
+Most US small business sites we audit have the same five problems. Schema is missing or broken (LocalBusiness not implemented, BreadcrumbList missing, Service schema not validating). NAP does not match Google Business Profile (Name, Address, Phone inconsistencies between site and GBP, Yelp, Facebook, BBB). Tracking is half-installed (GA4 fires page views but conversions not tagged, GTM exists but no events firing, call tracking not wired to forms). Forms are converting at half their potential (generic Submit buttons, vague form titles, no spam blockers, mobile CTAs that scare cautious customers). City pages are templated rather than optimized (same paragraph with city name swapped, identical schema across locations, no real differentiation).
+
+Google's March 2024 spam policy update specifically targets templated city pages as scaled content abuse. Most agencies still build sites this way because templating is cheap and looks like volume.
+
+## Approach to AI Search
+
+We optimize for both Google and AI search engines because both matter, and because they reward the same fundamentals in slightly different ways. Schema, structure, authority, page speed, and internal linking remain the foundation. The audience now includes ChatGPT, Claude, Perplexity, and Gemini, not just Google.
+
+Generative Engine Optimization is largely just doing technical SEO and content strategy correctly with awareness of how LLMs read and cite the web. The schema work matters more. The entity discipline matters more. The content structure matters more. The fundamentals are the same.
+
+We use AI extensively in our research and editing process. We do not use AI to generate publishable content for clients. Real human writers with real expertise produce the words on finished pages.
+
+## What We Do Not Do
+
+No PBNs. No link farms. No expired domain redirects. No link rental schemes. No link exchanges. No link wheels. No three-way link triangles. No volume content production. No AI-generated articles with light human editing. No keyword stuffing. No templated city pages. No long-term contracts that lock clients in. No surprise phase-two fees that appear when results are questioned. No vanity metric reporting. No black box deliverables. No work that gets clients penalized 12 to 24 months later.
+
+## Geography
+
+We work with US small and mid-sized businesses. We do not work outside the US. We do not take on enterprise contracts. We focus narrowly so we can deliver well.
+
+## Contact
+
+Email: hello@flipflopsolution.com
+Website: https://flipflopsolution.com/
+Free audit form: https://flipflopsolution.com/contact
+Response time: 24 hours
+Audit turnaround: 48 hours
+Sales calls required: None
+
+## Pages
+
+- [Homepage](https://flipflopsolution.com/)
+- [About](https://flipflopsolution.com/about)
+- [Services overview](https://flipflopsolution.com/services)
+- [Process and methodology](https://flipflopsolution.com/process)
+- [Industries served](https://flipflopsolution.com/industries)
+- [Technical SEO service](https://flipflopsolution.com/technical-seo)
+- [AI and Content Strategy service](https://flipflopsolution.com/ai-content-strategy)
+- [Generative Engine Optimization service](https://flipflopsolution.com/geo)
+- [Link Building service](https://flipflopsolution.com/link-building)
+- [Migrations service](https://flipflopsolution.com/tech-infrastructure)
+- [Free SEO Audit](https://flipflopsolution.com/neural-scan)
+- [Contact](https://flipflopsolution.com/contact)
+- [Blog](https://flipflopsolution.com/blog)
+- [Sitemap](https://flipflopsolution.com/sitemap)
+- [Privacy Policy](https://flipflopsolution.com/privacy-policy)
+- [Accessibility Statement](https://flipflopsolution.com/accessibility)
+- [Terms and Conditions](https://flipflopsolution.com/terms)

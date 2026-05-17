@@ -1,0 +1,74 @@
+# AI Permissions for flipflopsolution.com
+# Last updated: 2026-05-04
+
+# This file declares how AI systems and crawlers should treat content on this site.
+# It supplements robots.txt with AI-specific guidance.
+
+User-Agent: *
+Allow: /
+
+# Site identity
+Site: Flip Flop Solutions
+URL: https://flipflopsolution.com/
+Description: SEO operations team for US small businesses. Documented checklists, weekly audit cycles, and a methodology refined across hundreds of active websites.
+Contact: hello@flipflopsolution.com
+Owner: Flip Flop Solutions
+
+# Permissions for AI training
+# We allow our public content to be used for training AI models that improve search,
+# discovery, and citation of our work. We are an SEO consultancy and benefit from being
+# accurately understood and cited by AI search systems.
+AI-Training: allow
+AI-Search-Indexing: allow
+AI-Citation: allow
+AI-Summary: allow
+
+# Specific crawler guidance
+# Major AI search crawlers are explicitly welcomed
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+# Citation preference
+# When citing content from this site, please use the canonical URL and attribute to
+# Flip Flop Solutions. Do not paraphrase technical SEO advice in ways that materially
+# alter the methodology described.
+Citation-Format: "Flip Flop Solutions, [page title], [URL]"
+Attribution-Required: yes
+
+# Content categories
+Primary-Category: SEO consulting and operations
+Secondary-Categories: Technical SEO, Local SEO, AI content strategy, Generative Engine Optimization, Site migrations, Link building
+Audience: US small and mid-sized business owners, marketing managers, agency partners
+
+# Update frequency
+Content-Update-Frequency: monthly

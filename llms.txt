@@ -1,0 +1,44 @@
+# Flip Flop Solutions
+
+> SEO operations team for US small businesses. Documented checklists, weekly audit cycles, and a methodology refined across hundreds of active websites. Technical SEO, AI content strategy, generative engine optimization, link building, migrations, and free audits.
+
+## What we do
+
+Flip Flop Solutions runs SEO operations the way it should have been done the whole time. We use documented pre-launch and post-launch checklists, transparent monthly reporting, and methodology refined across thousands of audit cycles. We work month-to-month with no long contracts. AI tooling savings pass through to clients as lower prices, not higher margin. Everything we produce is owned by the client from day one.
+
+## Pages
+
+- [Homepage](https://flipflopsolution.com/): Overview of services, methodology, and stories.
+- [About](https://flipflopsolution.com/about): Why we exist, our six operating principles, and our scale.
+- [Services](https://flipflopsolution.com/services): All services with brief descriptions and links.
+- [Process](https://flipflopsolution.com/process): The actual pre-launch and post-launch audit checklists we run on every site.
+- [Industries](https://flipflopsolution.com/industries): The US verticals we serve.
+- [Contact](https://flipflopsolution.com/contact): Free audit request form.
+
+## Services
+
+- [Technical SEO](https://flipflopsolution.com/technical-seo): Schema implementation, Core Web Vitals, crawl health, indexation, redirects, internal linking.
+- [AI and Content Strategy](https://flipflopsolution.com/ai-content-strategy): Entity-based content for Google rankings and LLM citation.
+- [Generative Engine Optimization](https://flipflopsolution.com/geo): Get cited by ChatGPT, Claude, Perplexity, and Gemini.
+- [Link Building](https://flipflopsolution.com/link-building): Editorial outreach, citation building, local press. No PBNs.
+- [Migrations and Replatforming](https://flipflopsolution.com/tech-infrastructure): Documented migration process. 150+ migrations with zero traffic loss.
+- [Free SEO Audit](https://flipflopsolution.com/neural-scan): Pre-launch checklist run against your live site. 48-hour turnaround.
+
+## Blog
+
+- [The State-Name Goldmine](https://flipflopsolution.com/state-name-goldmine-pattern): Why old domains with state or region names baked into the brand still rank faster than newer competitors.
+- [Five Problems on 90 Percent of Sites](https://flipflopsolution.com/five-problems-on-90-percent-of-sites): The same five issues show up on 9 out of 10 US small business sites we audit.
+- [Migrations Without Traffic Loss](https://flipflopsolution.com/migrations-without-traffic-loss): The documented process we use across 150+ migrations with zero traffic loss.
+
+## Optional
+
+- [Blog index](https://flipflopsolution.com/blog): All posts.
+- [Sitemap](https://flipflopsolution.com/sitemap): All pages on the site.
+- [Privacy Policy](https://flipflopsolution.com/privacy-policy)
+- [Accessibility Statement](https://flipflopsolution.com/accessibility)
+- [Terms and Conditions](https://flipflopsolution.com/terms)
+
+## Contact
+
+Email: hello@flipflopsolution.com
+Website: https://flipflopsolution.com/

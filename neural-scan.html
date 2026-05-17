@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Free SEO Audit · Flip Flop Solutions</title>
+<meta name="description" content="Send us your URL. We run our actual pre-launch checklist against your live site and send you a real findings report within 48 hours.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Flip Flop Solutions">
+<link rel="canonical" href="https://flipflopsolution.com/neural-scan">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05010F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flipflopsolution.com/neural-scan">
+<meta property="og:site_name" content="Flip Flop Solutions">
+<meta property="og:title" content="Free SEO Audit · Flip Flop Solutions">
+<meta property="og:description" content="Send us your URL. We run our actual pre-launch checklist against your live site and send you a real findings report within 48 hours.">
+<meta property="og:image" content="https://flipflopsolution.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--void:#05010F;--deepspace:#0A0518;--nebula:#140828;--starlight:#E8E4FF;--white:#F8F6F1;--cyan:#00F5FF;--magenta:#FF2E9A;--violet:#8B5CFF;--amber:#FFB800;--grey:#7A7090;--rule:rgba(139,92,255,.18);--rule-strong:rgba(139,92,255,.35);--green:#00FFB2;--serif:'Playfair Display',Georgia,serif;--mono:'JetBrains Mono',monospace;--sans:'Inter',-apple-system,sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:var(--void);color:var(--starlight);font-family:var(--sans);font-weight:300;overflow-x:hidden;position:relative;min-height:100vh;}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 10%,rgba(139,92,255,.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 60%,rgba(255,46,154,.08) 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,rgba(0,245,255,.08) 0%,transparent 50%),var(--void);z-index:-2;pointer-events:none;}
+body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(1px 1px at 20px 30px,var(--starlight),transparent),radial-gradient(1px 1px at 60px 70px,rgba(232,228,255,.7),transparent),radial-gradient(1px 1px at 50px 160px,var(--cyan),transparent),radial-gradient(1px 1px at 130px 40px,rgba(232,228,255,.5),transparent),radial-gradient(1px 1px at 90px 200px,var(--magenta),transparent),radial-gradient(1px 1px at 200px 100px,rgba(232,228,255,.6),transparent),radial-gradient(1px 1px at 240px 180px,var(--violet),transparent),radial-gradient(1px 1px at 320px 60px,rgba(232,228,255,.7),transparent);background-repeat:repeat;background-size:400px 250px;opacity:.4;z-index:-1;pointer-events:none;animation:driftStars 200s linear infinite;}
+@keyframes driftStars{from{background-position:0 0;}to{background-position:400px 250px;}}
+#trace-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:5;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(5,1,15,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);transition:box-shadow .3s;}
+.logo{font-family:var(--serif);font-weight:900;font-size:1.1rem;letter-spacing:-0.02em;text-decoration:none;color:var(--starlight);display:flex;align-items:center;gap:.3rem;}
+.logo-flip{display:inline-block;transition:transform .5s cubic-bezier(.68,-.55,.27,1.55);color:var(--cyan);text-shadow:0 0 12px rgba(0,245,255,.6);}
+.logo:hover .logo-flip{transform:scaleX(-1);}
+.logo-dot{color:var(--magenta);text-shadow:0 0 8px rgba(255,46,154,.7);}
+.nav-r{display:flex;align-items:center;gap:2rem;}
+.nav-link{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .2s,text-shadow .2s;}
+.nav-link:hover,.nav-link.active{color:var(--cyan);text-shadow:0 0 8px rgba(0,245,255,.5);}
+.nav-btn{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--void);background:var(--cyan);padding:.6rem 1.3rem;text-decoration:none;border:1px solid var(--cyan);transition:all .25s;box-shadow:0 0 20px rgba(0,245,255,.4);font-weight:600;}
+.nav-btn:hover{background:var(--magenta);border-color:var(--magenta);color:var(--white);box-shadow:0 0 25px rgba(255,46,154,.6);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--cyan);box-shadow:0 0 6px var(--cyan);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--void);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-mobile.open{display:flex;}
+.nav-mobile a{font-family:var(--serif);font-weight:900;font-size:2rem;color:var(--starlight);text-decoration:none;}
+.nav-mobile a:hover{color:var(--cyan);text-shadow:0 0 12px var(--cyan);}
+.nav-close{position:absolute;top:1.5rem;right:2rem;font-size:1.5rem;cursor:pointer;background:none;border:none;color:var(--cyan);}
+.traceable{position:relative;cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><g transform='rotate(-45 14 14)'><rect x='10' y='2' width='8' height='14' fill='%23FFB800' stroke='%2305010F' stroke-width='1.5'/><rect x='10' y='14' width='8' height='4' fill='%23E8E4FF' stroke='%2305010F' stroke-width='1.5'/><polygon points='10,18 18,18 14,26' fill='%2305010F'/></g></svg>") 0 28,crosshair;}
+.page-header{padding:9rem 3rem 5rem;border-bottom:1px solid var(--rule);max-width:1400px;margin:0 auto;position:relative;}
+.mono-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem;text-shadow:0 0 10px rgba(0,245,255,.4);}
+.mono-label::before{content:'';display:inline-block;width:24px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);}
+.display-title{font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,5vw,5rem);line-height:1.05;letter-spacing:-0.03em;margin-bottom:2rem;max-width:1000px;color:var(--starlight);}
+.display-title em{font-style:italic;color:var(--cyan);text-shadow:0 0 30px rgba(0,245,255,.4);}
+.lede{font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.7;color:var(--starlight);opacity:.85;max-width:740px;}
+.lede strong{color:var(--cyan);font-weight:500;}
+section{padding:5.5rem 3rem;max-width:1400px;margin:0 auto;border-bottom:1px solid var(--rule);position:relative;}
+.section-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,3.6vw,3.2rem);letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.8rem;max-width:920px;color:var(--starlight);}
+.section-title em{font-style:italic;color:var(--cyan);text-shadow:0 0 24px rgba(0,245,255,.35);}
+.section-intro{font-size:1.05rem;line-height:1.8;color:var(--starlight);opacity:.8;max-width:780px;margin-bottom:1.5rem;}
+.section-intro strong{color:var(--starlight);opacity:1;font-weight:500;}
+.prose{max-width:780px;}
+.prose p{font-size:1rem;line-height:1.85;color:var(--starlight);opacity:.85;margin-bottom:1.4rem;}
+.prose strong{color:var(--cyan);font-weight:500;}
+.prose em{color:var(--magenta);font-style:italic;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0;border-top:1px solid var(--rule);margin-top:2.5rem;}
+.feature-card{padding:2.5rem 2rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);background:rgba(20,8,40,.3);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:background .3s;}
+.feature-card:last-child{border-right:none;}
+.feature-card:hover{background:rgba(20,8,40,.55);}
+.feature-card h4{font-family:var(--serif);font-weight:900;font-size:1.3rem;margin-bottom:1rem;letter-spacing:-0.01em;color:var(--starlight);}
+.feature-card h4 em{font-style:italic;color:var(--cyan);}
+.feature-card p{font-size:.92rem;color:var(--starlight);opacity:.8;line-height:1.8;margin-bottom:.9rem;}
+.feature-card p:last-child{margin-bottom:0;}
+.feature-card strong{color:var(--magenta);font-weight:500;}
+.checklist-block{background:linear-gradient(180deg,var(--deepspace),var(--nebula));padding:5.5rem 3rem;border-bottom:1px solid var(--rule);position:relative;}
+.checklist-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.5;}
+.checklist-inner{max-width:1400px;margin:0 auto;}
+.checklist-list{list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.6rem 2rem;}
+.checklist-list li{font-family:var(--mono);font-size:.78rem;color:var(--starlight);opacity:.85;line-height:1.6;padding:.5rem 0 .5rem 1.4rem;position:relative;letter-spacing:.02em;}
+.checklist-list li::before{content:'\2713';position:absolute;left:0;color:var(--green);font-weight:bold;text-shadow:0 0 6px var(--green);}
+.industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0;border-top:1px solid var(--rule);margin-top:2.5rem;}
+.industry-card{padding:2.5rem 2rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);background:rgba(20,8,40,.3);transition:background .3s;}
+.industry-card:last-child{border-right:none;}
+.industry-card:hover{background:rgba(20,8,40,.55);}
+.industry-card-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--magenta);text-transform:uppercase;margin-bottom:.8rem;text-shadow:0 0 8px rgba(255,46,154,.3);}
+.industry-card h3{font-family:var(--serif);font-weight:900;font-size:1.4rem;margin-bottom:1rem;letter-spacing:-0.01em;color:var(--starlight);}
+.industry-card h3 em{font-style:italic;color:var(--cyan);}
+.industry-card p{font-size:.92rem;color:var(--starlight);opacity:.8;line-height:1.8;margin-bottom:.8rem;}
+.industry-card p:last-child{margin-bottom:0;}
+.industry-card strong{color:var(--magenta);font-weight:500;}
+.cta-section{background:linear-gradient(180deg,var(--nebula),var(--deepspace));color:var(--starlight);padding:6rem 3rem;text-align:center;border-bottom:none;position:relative;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,245,255,.08),transparent 70%);transform:translate(-50%,-50%);pointer-events:none;}
+.cta-section .section-title{margin:0 auto 1.8rem;position:relative;color:var(--starlight);}
+.cta-section p{color:var(--starlight);opacity:.8;max-width:680px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.75;position:relative;}
+.cta-section p:last-of-type{margin-bottom:2.5rem;}
+.btn-primary{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--void);background:var(--cyan);padding:1rem 1.8rem;text-decoration:none;border:1px solid var(--cyan);transition:all .25s;font-weight:600;box-shadow:0 0 24px rgba(0,245,255,.35);display:inline-block;position:relative;}
+.btn-primary:hover{background:var(--magenta);border-color:var(--magenta);color:var(--white);box-shadow:0 0 32px rgba(255,46,154,.55);transform:translateY(-1px);}
+.cta-foot{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--starlight);opacity:.5;text-transform:uppercase;margin-top:2rem;position:relative;}
+footer{padding:2.5rem 3rem;display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:2rem;border-top:1px solid var(--rule);background:var(--void);}
+.foot-brand{font-family:var(--serif);font-weight:900;font-size:.95rem;letter-spacing:-0.02em;text-decoration:none;color:var(--starlight);}
+.foot-brand span{color:var(--magenta);}
+.foot-links{display:flex;gap:2rem;list-style:none;justify-content:center;flex-wrap:wrap;}
+.foot-links a{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .2s;}
+.foot-links a:hover{color:var(--cyan);}
+.foot-right{text-align:right;}
+.foot-copy{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--grey);text-transform:uppercase;}
+.foot-logic{font-family:var(--mono);font-size:.56rem;color:var(--grey);opacity:.6;line-height:1.7;margin-top:.8rem;max-width:320px;text-align:right;}
+.foot-logic strong{color:var(--cyan);}
+.trace-modal{position:fixed;bottom:2rem;right:2rem;z-index:1000;background:linear-gradient(135deg,var(--nebula),var(--deepspace));border:1px solid var(--cyan);padding:1.8rem;max-width:380px;box-shadow:0 0 40px rgba(0,245,255,.25),inset 0 0 0 1px rgba(255,46,154,.2);transform:translateY(20px);opacity:0;pointer-events:none;transition:all .4s cubic-bezier(.2,.9,.3,1.2);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
+.trace-modal.show{transform:translateY(0);opacity:1;pointer-events:auto;}
+.trace-modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
+.trace-modal-eye{font-size:1.4rem;filter:drop-shadow(0 0 8px var(--cyan));}
+.trace-modal-close{background:none;border:none;color:var(--grey);font-size:1.2rem;cursor:pointer;padding:0;width:24px;height:24px;display:flex;align-items:center;justify-content:center;transition:color .2s;}
+.trace-modal-close:hover{color:var(--magenta);}
+.trace-modal h4{font-family:var(--serif);font-weight:900;font-size:1.15rem;color:var(--starlight);margin-bottom:.5rem;letter-spacing:-0.01em;}
+.trace-modal h4 em{font-style:italic;color:var(--cyan);}
+.trace-modal p{font-size:.85rem;line-height:1.6;color:var(--starlight);opacity:.8;margin-bottom:1.2rem;}
+.trace-modal p strong{color:var(--magenta);font-weight:500;}
+.trace-modal-form{display:flex;gap:.5rem;}
+.trace-modal-form input{flex:1;padding:.7rem .9rem;background:rgba(5,1,15,.6);border:1px solid var(--rule-strong);color:var(--starlight);font-family:var(--mono);font-size:.8rem;outline:none;transition:border-color .2s;}
+.trace-modal-form input:focus{border-color:var(--cyan);}
+.trace-modal-form input::placeholder{color:var(--grey);}
+.trace-modal-form button{padding:.7rem 1rem;background:var(--cyan);color:var(--void);border:1px solid var(--cyan);font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:all .2s;box-shadow:0 0 16px rgba(0,245,255,.3);}
+.trace-modal-form button:hover{background:var(--magenta);border-color:var(--magenta);color:var(--white);}
+.trace-modal-success{font-family:var(--mono);font-size:.75rem;color:var(--green);text-align:center;padding:1rem 0;text-shadow:0 0 8px var(--green);display:none;}
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   Mobile small: <480px
+   Mobile large: 480-767px
+   Tablet portrait: 768-1023px
+   Tablet landscape / small laptop: 1024-1279px
+   Desktop: 1280-1919px (default)
+   Ultra-wide: 1920px+
+   ============================================================ */
+
+/* Ultra-wide screens · prevent over-stretching */
+@media(min-width:1920px){
+.page-header,section,.checklist-section,.checklist-block,.industries-section,.contact-grid,.expectations,footer{max-width:1600px;}
+.hero h1,.display-title{font-size:clamp(3rem,4vw,5.5rem);}
+.section-title{font-size:clamp(2.4rem,3vw,3.6rem);}
+}
+
+/* Standard desktop · already the default, no override needed */
+
+/* Tablet landscape and small laptop (1024-1279px) */
+@media(max-width:1279px){
+.page-header,.hero{padding:8rem 2.5rem 4rem;}
+section,.checklist-section,.checklist-block,.industries-section{padding:4.5rem 2.5rem;}
+.cta-section{padding:5rem 2.5rem;}
+nav{padding:1.1rem 2.5rem;}
+footer{padding:2.5rem 2.5rem;}
+}
+
+/* Tablet portrait (768-1023px) */
+@media(max-width:1023px){
+.page-header,.hero{padding:7.5rem 2rem 3.5rem;}
+section,.checklist-section,.checklist-block,.industries-section{padding:4rem 2rem;}
+.cta-section{padding:4.5rem 2rem;}
+nav{padding:1rem 2rem;}
+footer{padding:2.5rem 2rem;grid-template-columns:1fr 1fr;}
+.foot-right{text-align:right;}
+.foot-logic{text-align:right;}
+.hero h1,.display-title{font-size:clamp(2.4rem,4.5vw,4rem);}
+.section-title{font-size:clamp(1.8rem,3.4vw,2.6rem);}
+.problem-grid,.services-grid,.feature-grid,.industry-grid,.principles-grid{grid-template-columns:repeat(2,1fr);}
+.checklist-grid{grid-template-columns:repeat(2,1fr);}
+.industries-grid{grid-template-columns:repeat(3,1fr);}
+.scale-grid{grid-template-columns:repeat(3,1fr);}
+.expect-grid{grid-template-columns:repeat(2,1fr);}
+.contact-grid{grid-template-columns:1fr;gap:3rem;}
+}
+
+/* Tablet portrait and below · show hamburger nav */
+@media(max-width:900px){
+nav{padding:1rem 1.5rem;}
+.nav-r .nav-link,.nav-r .nav-btn{display:none;}
+.nav-hamburger{display:flex;}
+}
+
+/* Large phone (480-767px) */
+@media(max-width:767px){
+.page-header,.hero{padding:6.5rem 1.5rem 3rem;}
+section,.checklist-section,.checklist-block,.industries-section,.cta-section{padding:3.5rem 1.5rem;}
+footer{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem;text-align:left;}
+.foot-links{justify-content:flex-start;gap:1rem 1.5rem;}
+.foot-right{text-align:left;}
+.foot-logic{text-align:left;max-width:100%;}
+.hero h1,.display-title{font-size:clamp(2rem,7vw,3rem);line-height:1.1;}
+.section-title{font-size:clamp(1.6rem,5.5vw,2.2rem);line-height:1.15;}
+.lede,.hero-sub{font-size:1rem;line-height:1.65;}
+.section-intro{font-size:.95rem;line-height:1.7;}
+.problem-grid,.services-grid,.feature-grid,.industry-grid,.principles-grid,.checklist-grid,.expect-grid{grid-template-columns:1fr;}
+.industries-grid{grid-template-columns:repeat(2,1fr);}
+.scale-grid{grid-template-columns:repeat(2,1fr);}
+.problem-card,.service-card,.industry-card,.feature-card,.principle-card,.checklist-col,.expect-card,.scale-item{border-right:none;}
+.story-block{padding:1.8rem 1.5rem;}
+.evolution-row{grid-template-columns:1fr;gap:.6rem;}
+.contact-grid{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.5rem;}
+.form-section{padding:1.8rem;}
+.expectations{padding:3rem 1.5rem;}
+.service-row{grid-template-columns:1fr;gap:1.2rem;padding:2rem 0;}
+.service-row:hover{padding-left:0;padding-right:0;}
+.service-row-num{padding-top:0;width:auto;}
+.service-row-arrow{align-self:flex-start;}
+.content-section{padding:3rem 1.5rem;}
+.trace-modal{bottom:1rem;right:1rem;left:1rem;max-width:none;}
+.btn-primary,.btn-secondary{padding:.9rem 1.4rem;font-size:.65rem;}
+.hero-cta{flex-direction:column;}
+.hero-cta a{text-align:center;}
+.hero-meta{flex-direction:column;gap:.8rem;align-items:flex-start;}
+}
+
+/* Small phone (under 480px) */
+@media(max-width:479px){
+nav{padding:.8rem 1rem;}
+.logo{font-size:.95rem;}
+.page-header,.hero{padding:6rem 1rem 2.5rem;}
+section,.checklist-section,.checklist-block,.industries-section,.cta-section{padding:3rem 1rem;}
+footer{padding:2rem 1rem;}
+.hero h1,.display-title{font-size:clamp(1.8rem,8vw,2.4rem);}
+.section-title{font-size:clamp(1.4rem,6vw,1.9rem);}
+.problem-card,.service-card,.industry-card,.feature-card,.principle-card,.checklist-col,.expect-card,.scale-item{padding:1.8rem 1.25rem;}
+.story-block{padding:1.5rem 1.25rem;}
+.industries-grid{grid-template-columns:1fr;}
+.scale-grid{grid-template-columns:1fr;}
+.scale-num{font-size:2.4rem;}
+.content-section{padding:2.5rem 1rem;}
+.content-section h2{font-size:1.3rem;}
+.trace-modal{padding:1.4rem;}
+.trace-modal-form{flex-direction:column;}
+.trace-modal-form button{width:100%;}
+}
+</style>
+</head>
+<body>
+<svg id="trace-canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+<nav id="nav">
+<a href="/" class="logo"><span class="logo-flip">↔</span>&nbsp;Flip<span class="logo-dot">.</span>Flop Solutions</a>
+<div class="nav-r">
+<a href="/services" class="nav-link active">Services</a>
+<a href="/process" class="nav-link">Process</a>
+<a href="/industries" class="nav-link">Industries</a>
+<a href="/about" class="nav-link">About</a>
+<a href="/contact" class="nav-btn">Free Audit →</a>
+</div>
+<button class="nav-hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+<button class="nav-close" onclick="toggleMenu()">✕</button>
+<a href="/services" onclick="toggleMenu()">Services</a>
+<a href="/process" onclick="toggleMenu()">Process</a>
+<a href="/industries" onclick="toggleMenu()">Industries</a>
+<a href="/about" onclick="toggleMenu()">About</a>
+<a href="/contact" onclick="toggleMenu()" style="color:var(--cyan);">Free Audit →</a>
+</div>
+
+<div class="page-header">
+<div class="mono-label">Free SEO Audit</div>
+<h1 class="display-title traceable">Send us your URL. <em>We will send you a real audit.</em></h1>
+<p class="lede traceable">Not a generic PDF. Not a sales call disguised as a report. Not a templated checklist that says everything is "yellow" so you book a strategy session. <strong>We run our actual pre-launch checklist against your live site and send you a real findings report within 48 hours.</strong></p>
+</div>
+
+<section>
+<div class="mono-label">What you get</div>
+<h2 class="section-title traceable">The same checklist we run on <em>every paying client.</em></h2>
+<p class="section-intro traceable">Our free audit is not a watered-down marketing version of our paid work. It is the same pre-launch checklist we run on every site we touch, applied to your live URL. You receive a written findings report within 48 hours. <strong>Specific issues. Prioritized fixes. Quick wins flagged separately.</strong> No sales call required. No obligation to hire us afterward. The audit is yours regardless of what you do with it.</p>
+<div class="feature-grid">
+<div class="feature-card">
+<h4 class="traceable">Crawl <em>health</em></h4>
+<p class="traceable">Full Screaming Frog crawl of your live site. We identify orphan pages, broken internal links, redirect chains, soft 404s, duplicate canonical issues, and parameter handling problems. <strong>The crawl alone usually surfaces issues your current team did not know existed.</strong></p>
+</div>
+<div class="feature-card">
+<h4 class="traceable">Schema <em>audit</em></h4>
+<p class="traceable">Every page checked for structured data. LocalBusiness, BreadcrumbList, Service, Review, FAQ, Article, ContactPage. We test each through Google's Rich Results Test and report on what's missing, what's malformed, and what's invalid. <strong>Schema is one of the highest-leverage fixes most sites can make.</strong></p>
+</div>
+<div class="feature-card">
+<h4 class="traceable">Tracking <em>review</em></h4>
+<p class="traceable">GA4 setup verified. Search Console verified. Tag Manager firing. Bing Webmaster Tools setup. Conversion events tested. We tell you exactly which tracking is incomplete or misconfigured. <strong>If you are paying an SEO agency without complete tracking, you are paying blind.</strong></p>
+</div>
+<div class="feature-card">
+<h4 class="traceable">NAP <em>consistency</em></h4>
+<p class="traceable">Name, Address, Phone consistency across your website, Google Business Profile, Yelp, Facebook, BBB, and industry-specific directories. We document every inconsistency we find. <strong>Local search rankings are sensitive to NAP drift, and most businesses have it without realizing.</strong></p>
+</div>
+<div class="feature-card">
+<h4 class="traceable">Conversion <em>paths</em></h4>
+<p class="traceable">Form titles, submit button copy, mobile call CTAs, trust signal placement, conversion-focused page elements. We flag where your site is leaking leads and what specific changes would recover them. <strong>This is often the fastest revenue improvement available.</strong></p>
+</div>
+<div class="feature-card">
+<h4 class="traceable">Quick wins <em>flagged</em></h4>
+<p class="traceable">Every audit separates issues into quick wins (easy fixes with high impact), priorities (real work but worth it), and long-term investments. <strong>Quick wins should always be done first.</strong> We flag them clearly so you can hand the list to a developer and have measurable improvement within a week.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="mono-label">What it is not</div>
+<h2 class="section-title traceable">Not a sales pitch. <em>Not a generic PDF.</em> Not a strategy call.</h2>
+<div class="prose">
+<p class="traceable">Most "free SEO audits" you can request online are one of three things. <strong>The first kind is a fully automated PDF report</strong> generated by a tool, with no human review, no prioritization, and dozens of items flagged that may or may not actually matter on your site. They look thorough. They mostly are not.</p>
+<p class="traceable">The second kind is a sales call disguised as an audit. You fill out the form, get scheduled into a 30-minute "discovery call," sit through a slide deck about the agency, and receive a vague summary of what they "would" audit if you signed a contract. <em>You do not get findings. You get a sales pitch.</em></p>
+<p class="traceable">The third kind is what we offer. <strong>You send your URL. We run our actual checklist. You receive a written report.</strong> No call required. No contract required. No obligation. The audit is yours, you can read it on your own time, you can act on it however you want, you can ignore it entirely. We deliver it because we want a chance to earn your trust through real work, and because some percentage of the businesses who receive it eventually come back to hire us.</p>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="mono-label" style="color:var(--cyan);">Free Audit</div>
+<h2 class="section-title traceable">Send us your URL. <em>That is it.</em></h2>
+<p class="traceable">The form takes 30 seconds. We respond within 24 hours acknowledging your request. The full audit follows within 48 hours. No call required. No contract required. The audit is yours either way.</p>
+<a href="/contact" class="btn-primary">Get Your Free Audit →</a>
+<div class="cta-foot">US businesses · 24-hour response · 48-hour audit turnaround · No sales call required</div>
+</section>
+
+<footer>
+<a href="/" class="foot-brand">Flip<span>.</span>Flop Solutions</a>
+<ul class="foot-links">
+<li><a href="/accessibility">Accessibility Statement</a></li>
+<li><a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="/sitemap">Sitemap</a></li>
+<li><a href="/terms">Terms &amp; Conditions</a></li>
+</ul>
+<div class="foot-right">
+<div class="foot-copy">© 2026 Flip Flop Solutions</div>
+<div class="foot-logic"><strong>Flip-Flop:</strong> A bistable multivibrator. A fundamental digital circuit capable of storing one bit of memory. We are the logic gate between your brand and the AI future.</div>
+</div>
+</footer>
+
+<div class="trace-modal" id="traceModal">
+<div class="trace-modal-header">
+<div class="trace-modal-eye">👀</div>
+<button class="trace-modal-close" id="traceModalClose">✕</button>
+</div>
+<h4>I see what you did <em>there.</em></h4>
+<p>Caught you highlighting the good parts. Want us to send you <strong>your traced highlights</strong> plus a free 48-hour audit of your site? We'll save you the trouble of taking notes.</p>
+<form class="trace-modal-form" id="traceModalForm" action="https://formspree.io/f/your-form-id" method="POST">
+<input type="email" name="email" placeholder="your@email.com" required>
+<input type="hidden" name="_subject" value="Trace highlight request from Flip Flop Solutions">
+<input type="hidden" name="highlights" id="traceHighlights" value="">
+<input type="hidden" name="page" value="neural-scan">
+<button type="submit">Send →</button>
+</form>
+<div class="trace-modal-success" id="traceModalSuccess">✓ On its way to your inbox.</div>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){var n=document.getElementById('nav');if(n)n.style.boxShadow=window.scrollY>10?'0 1px 0 rgba(0,245,255,.2)':'none';});
+function toggleMenu(){var m=document.getElementById('mobileNav');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+(function(){var canvas=document.getElementById('trace-canvas');var isDrawing=false;var currentPath=null;var allPaths=[];var tracedTexts=new Set();var lastPoint=null;function getPoint(e){var t=e.touches?e.touches[0]:e;return{x:t.clientX,y:t.clientY};}function findTraceable(x,y){var el=document.elementFromPoint(x,y);while(el&&el!==document.body){if(el.classList&&el.classList.contains('traceable'))return el;el=el.parentElement;}return null;}function startDraw(e){var traceable=findTraceable((e.touches?e.touches[0]:e).clientX,(e.touches?e.touches[0]:e).clientY);if(!traceable)return;isDrawing=true;e.preventDefault();var p=getPoint(e);lastPoint=p;currentPath=document.createElementNS('http://www.w3.org/2000/svg','path');currentPath.setAttribute('d','M '+p.x+' '+p.y);currentPath.setAttribute('stroke','rgba(255, 184, 0, 0.55)');currentPath.setAttribute('stroke-width',(10+Math.random()*4));currentPath.setAttribute('stroke-linecap','round');currentPath.setAttribute('stroke-linejoin','round');currentPath.setAttribute('fill','none');currentPath.setAttribute('filter','url(#pencilFilter)');currentPath.style.mixBlendMode='screen';canvas.appendChild(currentPath);}function draw(e){if(!isDrawing)return;e.preventDefault();var p=getPoint(e);var t=findTraceable(p.x,p.y);if(t){tracedTexts.add(t.textContent.trim().slice(0,200));}var d=currentPath.getAttribute('d');var midX=(lastPoint.x+p.x)/2;var midY=(lastPoint.y+p.y)/2;currentPath.setAttribute('d',d+' Q '+lastPoint.x+' '+lastPoint.y+' '+midX+' '+midY);lastPoint=p;}function endDraw(){if(!isDrawing)return;isDrawing=false;if(currentPath)allPaths.push(currentPath);currentPath=null;lastPoint=null;}var defs=document.createElementNS('http://www.w3.org/2000/svg','defs');defs.innerHTML='<filter id="pencilFilter"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter>';canvas.appendChild(defs);document.addEventListener('mousedown',startDraw);document.addEventListener('mousemove',draw);document.addEventListener('mouseup',endDraw);document.addEventListener('mouseleave',endDraw);document.addEventListener('touchstart',startDraw,{passive:false});document.addEventListener('touchmove',draw,{passive:false});document.addEventListener('touchend',endDraw);function sizeCanvas(){canvas.setAttribute('width',window.innerWidth);canvas.setAttribute('height',window.innerHeight);}sizeCanvas();window.addEventListener('resize',sizeCanvas);var modal=document.getElementById('traceModal');var modalClose=document.getElementById('traceModalClose');var modalForm=document.getElementById('traceModalForm');var modalSuccess=document.getElementById('traceModalSuccess');var hiddenHighlights=document.getElementById('traceHighlights');var modalShown=false;function showModal(){if(modalShown)return;if(tracedTexts.size===0)return;modalShown=true;hiddenHighlights.value=Array.from(tracedTexts).join('\n\n---\n\n');modal.classList.add('show');}setTimeout(showModal,13000);var modalCheckInterval=setInterval(function(){if(modalShown){clearInterval(modalCheckInterval);return;}showModal();},5000);modalClose.addEventListener('click',function(){modal.classList.remove('show');});modalForm.addEventListener('submit',function(e){setTimeout(function(){modalForm.style.display='none';modalSuccess.style.display='block';setTimeout(function(){modal.classList.remove('show');},2500);},200);});})();
+</script>
+</body>
+</html>
